@@ -8,71 +8,109 @@ programa
 
        funcao calculadora(){
        	inteiro esc
-       	escreva("==========calculadora=========")
+          real x=0.0
+          real y=0.0
+       	cadeia ctz
+       	escreva("==========calculadora=========\n")
        	escreva("soma[1]\n")
        	escreva("subtração[2]\n")
-       	escreva("multiplicação[3]\n")
-       	escreva("divisão[4]\n")
-       	escreva("sair[5]")
-       	escreva("==============================")
+       	escreva("divisão[3]\n")
+       	escreva("multiplicação[4]\n")
+       	escreva("sair[5]\n")
+       	escreva("===============================\n")
        	escreva("qual deseja realizar?\n")
 
        	leia(esc)
 
        	escolha(esc){
 
-			caso 1: soma()
+			caso 1: 
+
+			
+      	   escreva("informe o primeiro valor")
+	        leia(x)
+	        escreva("informe o  valor que sera somado ao primeiro")
+	        leia(y)
+			soma(x,y)
+			calculadora()
+			
 			pare
-			caso 2:subtracao()
+
+			
+			caso 2:
+			
+			
+      	   escreva("informe o primeiro valor")
+	        leia(x)
+	        escreva("informe o  valor que sera subtraido do primeiro")
+	        leia(y)
+	        subtracao(x,y)
+	        calculadora()
+
+	        
+			pare
+
+			 
+			caso 3: 
+			
+      	    escreva("informe o primeiro valor")
+	         leia(x)
+	         escreva("informe o  valor que ira dividir o primeiro")
+	         leia(y)
+			divisao(x,y)
+			calculadora()
+			
+			
+			pare
+			
+			caso 4:
+			
+      	     escreva("informe o primeiro valor")
+	          leia(x)
+	          escreva("informe o  valor que ira multiplicar o primeiro")
+	          leia(y)
+			multiplicacao(x,y)
+			calculadora()
 			pare 
-			caso 3: divisao()
-			pare
-			caso 4: multiplicacao()
-			pare
-			caso 5: 
-			pare
-			caso contrario: escreva("contrario")
+
+
+			
+	          caso 5: escreva("deseja mesmo sair?")
+	          leia(ctz)
+	          se(ctz=="sim"){
+	          	pare
+	          }senao{
+	          	calculadora()
+	          	}
+			pare 
+			caso contrario: escreva("opção não encontrada")
+			calculadora()
 			pare
 		}
        }
 
-      funcao soma(){
-      inteiro x=0
-      inteiro y=0
+      funcao soma(real x ,real y){
       	
-      	escreva("informe o primeiro   valor")
-	     leia(x)
-	     escreva("informe o  valor que sera somado ao primeiro")
-	     leia(y)
       	
-      	escreva(x+y)
+      	escreva(x+y,"\n")
       	   
       }
 
-      funcao subtracao(){
-      inteiro x=0
-      inteiro y=0
-      
-      	escreva("informe o primeiro   valor")
-	     leia(x)
-	     escreva("informe o  valor que sera subtraido do  primeiro")
-	     leia(y)
-      	escreva(x-y)
+      funcao subtracao(real x ,real y){
+     
+      	escreva(x-y,"\n")
       }
       
-      funcao divisao(){
-      inteiro x=0
-      inteiro y=0
+      funcao divisao(real x ,real y){
+    
       
-      	escreva("informe o primeiro   valor")
-	     leia(x)
-	     escreva("informe o  valor que sera o divisor do  primeiro")
-	     leia(y)
-      	escreva(x-y)
+      	escreva(x/y,"\n")
       	
       }
-){
-      	escreva(x*y)
+       funcao multiplicacao(real x ,real y){
+       
+      
+      	escreva(x*y,"\n")
       }
 
 
