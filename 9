@@ -1,0 +1,43 @@
+programa {
+  funcao inicio() {
+    logico resp
+    real a,b,c,base
+    
+    escreva("informe o valor das tres retas\n")
+    escreva("informe o primeiro:")
+    leia(a)
+    escreva("informe o segundo:")
+    leia(b)
+    escreva("informe o terceiro:")
+    leia(c)
+    triangulo(a,b,c,base,resp)
+    escreva("o trinagulo é: ",resp)
+
+    funcao logico triangulo(real a, real b,real c,real base ,logico &resp){
+
+      se(a>b e a>c){
+        base=a
+        a=0
+      }
+       se(b>a e b>c){
+        base=b
+        b=0
+      }
+       se(c>b e c>b){
+        base=c
+        c=0
+      }
+
+      se(a+b+c > base){
+        resp=verdadeiro
+      }
+      se(a+b+c < base){
+        resp=falso
+
+      }
+      retorne resp
+
+
+    }
+  }
+}
