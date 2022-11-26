@@ -1,0 +1,25 @@
+
+  funcao inicio() {
+    cadeia numero
+    inteiro ndig=0
+     
+     escreva("escreva o numero:")
+     leia(numero)
+     digitos(numero,ndig)
+     
+  }
+
+ funcao inteiro digitos(cadeia numero,inteiro ndig ){
+  
+     ndig= t.numero_caracteres(numero)
+     para(inteiro i=ndig; i > 0; i--){
+			caracter posicao = t.obter_caracter(numero, i-1)
+      
+     escreva( posicao)
+      
+
+      }
+
+  }
+}
+
